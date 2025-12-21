@@ -11,24 +11,37 @@ int main()
             scanf("%d", &matrix[i][j]);
         }
     }
-    int weeklyHours[7], sum;
+    int weeklyHours[7],index[7], sum;
     for(int i = 0; i < 7; i++)
     {
+        index[i] = i;
         for(int j = 0; j < 7; j++)
         {
             sum += matrix[i][j];
         }
         weeklyHours[i] = sum;
+
         sum = 0;
     }
     
-    int check = 0;
-    for(int i = 0; i<7; i++)
-    {
-        if(weeklyHours[i] > check)
-        {
-            check = weeklyHours[i];
+    for (int i = 0; i < 7 - 1; i++) {
+        for (int j = i + 1; j < 7; j++) {
+            if (weeklyHours[i] < weeklyHours[j]) {
+                int temp = weeklyHours[i];
+                weeklyHours[i] = weeklyHours[j];
+                weeklyHours[j] = temp;
+
+                temp = index[i];
+                index[i] = index[j];
+                index[j] = temp;
+            }
         }
+    }
+
+    /* Display result */
+    printf("Employee\tTotal Hours\n");
+    for (int i = 0; i < 7; i++) {
+        printf("%d\t\t%d\n", index[i] + 1, weeklyHours[i]);
     }
     return 0;
 }
