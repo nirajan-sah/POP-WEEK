@@ -7,7 +7,7 @@ int main()
     fb = fopen("dna_input.txt", "r");
 
     int size = 10;
-    float suspect[size];
+    float suspect[size];//Compiler shows an error here
 
     int sizeR, sizeC = 10;
 
@@ -21,7 +21,7 @@ int main()
     printf("Reading the number of criminals \n");
     fscanf(fb, "%d", &sizeR);
 
-    float criminals[sizeR][sizeC];
+    float criminals[sizeR][sizeC]; //the program itself is not erroring but the compiler shows an error here
 
     for(int i = 0; i<sizeR; i++)
     {

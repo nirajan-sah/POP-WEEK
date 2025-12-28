@@ -10,6 +10,6 @@ int main()
     
     float totalSpent = foodExpenses + leisureExpenses + clothesExpenses + accommodation + travel;
 
-    printf("The total expenditure this month was £ %.2f\n\n", totalSpent);
+    printf("The total expenditure this month was $ %.2f\n\n", totalSpent);
     return 0;
 }

@@ -11,7 +11,7 @@ int main()
             scanf("%d", &matrix[i][j]);
         }
     }
-    int weeklyHours[7],index[7], sum;
+    int weeklyHours[7],index[7], sum, temp;
     for(int i = 0; i < 7; i++)
     {
         index[i] = i;
@@ -27,7 +27,7 @@ int main()
     for (int i = 0; i < 7 - 1; i++) {
         for (int j = i + 1; j < 7; j++) {
             if (weeklyHours[i] < weeklyHours[j]) {
-                int temp = weeklyHours[i];
+                temp = weeklyHours[i];
                 weeklyHours[i] = weeklyHours[j];
                 weeklyHours[j] = temp;
 
@@ -38,7 +38,7 @@ int main()
         }
     }
 
-    /* Display result */
+   
     printf("Employee\tTotal Hours\n");
     for (int i = 0; i < 7; i++) {
         printf("%d\t\t%d\n", index[i] + 1, weeklyHours[i]);

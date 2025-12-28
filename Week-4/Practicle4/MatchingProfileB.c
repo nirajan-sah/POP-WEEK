@@ -3,7 +3,7 @@ int main()
 {
     const int size = 10;
     
-    int list = 3, match, found;
+    int list = 3, match, found, num;
 
     float check[3][10]; 
     float criminal[10]; 
@@ -29,12 +29,13 @@ int main()
             }
         }
         if (match){
+            num = i + 1;
             found = 1;
             break;
         }
     }
     if (found) {
-        printf("The profiles match.\n");
+        printf("The profiles match. Suspect number: %d\n", num);
     } else {
         printf("The profiles do not match.\n");
     }

@@ -1,19 +1,19 @@
 #include <stdio.h>
 void rightangled();
-void reverseright();
-void rightside();
 void reverseleft();
+void rightside();
+void reverseright();
 
 int main()
 {
     printf("Right angled shape\n");
     rightangled();
     printf("\nReverse right angled shape\n");
-    reverseright();
+    reverseleft();
     printf("\nRight side shape\n");
     rightside();
     printf("\nReverse right side shape\n");
-    reverseleft();
+    reverseright();
     return 0;
 }
 
@@ -29,7 +29,7 @@ void rightangled()
     }
 }
 
-void reverseright()
+void reverseleft()
 {
     for(int i = 6; i>=1; i--)
     {
@@ -59,7 +59,7 @@ void rightside()
     }
 }
 
-void reverseleft()
+void reverseright()
 {
     int k = 0;
     for(int i = 6; i>=1; i--)

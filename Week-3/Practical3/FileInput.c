@@ -10,7 +10,7 @@ int main()
     fp = fopen("inputFile.txt", "r");
     fscanf(fp,"%s %s %d", firstWord, secondWord, &num);
     printf("Displays back what has been read from input file:\n");
-    printf("%s %s \n%d", firstWord, secondWord, num);
+    printf("%s %s %d", firstWord, secondWord, num);
     fclose(fp);
     return 0;
 }
