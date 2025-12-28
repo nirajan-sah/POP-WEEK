@@ -2,4 +2,4 @@
 *.pdf
 *.docx
 *.zip
-*.txt
+.venv/
